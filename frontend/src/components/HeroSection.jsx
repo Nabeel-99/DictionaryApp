@@ -29,6 +29,9 @@ const HeroSection = ({darkMode}) => {
       setDisplayContent(true)
       setDisplayCustomWord(false)
       setDisplayCards(false)
+      if(word === ''){
+        setDisplayCards(true)
+      }
       const response = await fetch(dictionaryAPI)
       if(response.ok){
       const data = await response.json()
@@ -66,6 +69,7 @@ const HeroSection = ({darkMode}) => {
       if(contentRef.current && displayContent ){
         contentRef.current.scrollIntoView({behavior: 'smooth'})
       }
+      
     }, [dictionary, displayContent])
 
     const allWords = async () => {

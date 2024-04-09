@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { BiCodeAlt } from "react-icons/bi";
+import {Typewriter} from "react-simple-typewriter"
 const Cards = ({darkMode}) => {
   return (
-    <div className="bgsvg relative flex flex-col md:items-center  xl:flex-row md:gap-4">
+    <div className="bgsvg cards relative flex flex-col md:items-center  xl:flex-row md:gap-4">
       <div className="flex flex-col gap-10 xl:ml-10 mt-10 p-5 ">
         <div className={darkMode ? " rounded-md bg-[#222] flex items-center justify-center gap-4 shadow-lg shadow-cyan-800 drop-shadow-2xl  py-10 p-3 md:w-[27rem] " : "border bg-white rounded-md flex items-center justify-center gap-4 shadow-lg shadow-cyan-300 drop-shadow-2xl  py-10 p-3 md:w-[27rem] overflow-auto"}>
-            <p className="border overflow-auto h-7 text-left px-2 min-w-44 w-72  md:min-w-0 md:w-40 rounded-md">developer</p>
+            <p className="border overflow-auto h-7 text-left px-2 min-w-44 w-72  md:min-w-0 md:w-40 rounded-md">
+            <Typewriter
+            words={['developer']}
+            loop={1}
+            cursor
+            cursorStyle='|'
+            cursorBlinking={false}
+            typeSpeed={80}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          
+          />
+            </p>
             <p className="shadow-md text-sm px-4 border h-7 flex justify-center items-center rounded-md">Search</p>
         </div>
         <div className={darkMode ? " bg-[#222] rounded-md shadow-md shadow-blue-800   p-3 flex flex-col text-left md:w-[38rem] h-48 " : " bg-white rounded-md shadow-lg shadow-blue-200 drop-shadow-2xl border p-3 flex flex-col text-left md:w-[38rem] h-48"}>
@@ -48,7 +61,11 @@ const Cards = ({darkMode}) => {
 
        </div>
       </div>
-     
+     {/* <div className="absolute top-0 left-20">
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+     </div> */}
     </div>
   )
 }
