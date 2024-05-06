@@ -3,8 +3,8 @@ import { BiCodeAlt } from "react-icons/bi";
 import {Typewriter} from "react-simple-typewriter"
 const Cards = ({darkMode}) => {
   return (
-    <div className="bgsvg cards relative flex flex-col md:items-center  xl:flex-row md:gap-4">
-      <div className="flex flex-col gap-10 xl:ml-10 mt-10 p-5 ">
+    <div className={darkMode ? "bgsvg wave cards relative flex flex-col md:items-center  xl:flex-row md:gap-4" : "bgsvg waveW cards relative flex flex-col md:items-center  xl:flex-row md:gap-4"}>
+      <div className="flex  flex-col gap-10 xl:ml-10 mt-10 p-5 ">
         <div className={darkMode ? " rounded-md bg-[#222] flex items-center justify-center gap-4 shadow-lg shadow-cyan-800 drop-shadow-2xl  py-10 p-3 md:w-[27rem] " : "border bg-white rounded-md flex items-center justify-center gap-4 shadow-lg shadow-cyan-300 drop-shadow-2xl  py-10 p-3 md:w-[27rem] overflow-auto"}>
             <p className="border overflow-auto h-7 text-left px-2 min-w-44 w-72  md:min-w-0 md:w-40 rounded-md">
             <Typewriter

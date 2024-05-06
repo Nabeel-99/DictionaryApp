@@ -81,46 +81,45 @@ button:focus-visible {
   animation: gradient 15s ease infinite;
   background-attachment: fixed;
 }
-.wave{
-  background-color: green;
-  border-radius: 1000% 1000% 0 0;
-  position: fixed;
-  width: 200%;
-  height: 12rem;
-  animation: wave 10s  -3s  linear infinite;
-  transform: translate3d(0,0,0);
-  opacity: 0.8;
-  bottom: 0;
-  left: 0;
-  
-}
-
-.wave:nth-of-type(2){
-  bottom: -1.25rem;
-  animation: wave 18s linear reverse infinite;
-  opacity: 0.8;
-}
-
-.wave:nth-of-type(3){
-  bottom: -2.5rem;
-  animation: wave 20s -1s reverse infinite;
-  opacity: 0.9;
+.wave {
+  animation: wave 10s linear infinite alternate;
+  background-color: linear-gradient(45deg);
 }
 
 @keyframes wave {
-  2%{
-    transform: translateX(1);
+  0% {
+
+    background-color: #010804; /* Start color */
   }
-  25%{
-    transform: translateX(-25%);
+
+  60% {
+    background-color: #0b111a;
+
   }
-  50%{
-    transform: translateX(47%);
+
+  100% {
+    background-color: #02022b;
+    
   }
-  75%{
-    transform: translateX(-25%);
+}
+.waveW {
+  animation: wave 8s linear infinite alternate;
+  background-color: linear-gradient(45deg);
+}
+
+@keyframes wave {
+  0% {
+
+    background-color: #879c8e22; /* Start color */
   }
-  100%{
-    transform: translateX(1);
+
+  60% {
+    background-color: #7d9cca5e;
+
+  }
+
+  100% {
+    background-color: #a9a9e170;
+    
   }
 }
